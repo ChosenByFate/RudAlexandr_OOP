@@ -13,7 +13,17 @@ public class Hyena extends Carnivorous implements Run, Voice {
     }
 
     @Override
+    public void runAround() {
+        System.out.println(getName() + " is running around.");
+    }
+
+    @Override
     public String voice() {
         return "Hyena's voice.";
+    }
+
+    @Override
+    public String cry() {
+        return "Hyena's cry.";
     }
 }

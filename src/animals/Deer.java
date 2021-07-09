@@ -14,7 +14,17 @@ public class Deer extends Herbivore implements Run, Voice {
     }
 
     @Override
+    public void runAround() {
+        System.out.println(getName() + " is running around.");
+    }
+
+    @Override
     public String voice() {
+        return "Deer's voice.";
+    }
+
+    @Override
+    public String cry() {
         return "Deer's voice.";
     }
 }

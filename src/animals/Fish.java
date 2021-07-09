@@ -11,4 +11,9 @@ public class Fish extends animals.Carnivorous implements Swim {
     public void swim() {
         System.out.println(getName() + " is swimming.");
     }
+
+    @Override
+    public void spin() {
+        System.out.println(getName() + " is spinning.");
+    }
 }

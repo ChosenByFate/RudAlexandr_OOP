@@ -13,12 +13,27 @@ public class Hawk extends Carnivorous implements Fly, Run, Voice {
     }
 
     @Override
+    public void goDown() {
+        System.out.println(getName() + " is going down.");
+    }
+
+    @Override
     public void run() {
         System.out.println(getName() + " is running.");
     }
 
     @Override
+    public void runAround() {
+        System.out.println(getName() + " is running around.");
+    }
+
+    @Override
     public String voice() {
         return "Hawk's voice.";
+    }
+
+    @Override
+    public String cry() {
+        return "Hawk's cry.";
     }
 }
