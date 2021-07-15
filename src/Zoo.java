@@ -26,14 +26,16 @@ class Zoo {
         for (Animal a :
                 animals) {
             try {
-                jack.getVoice((Voice)a);
+                if ((int)(Math.random() * 2) == 0)
+                    jack.getVoice((Voice)a);
+                else
+                    jack.getCry((Voice)a);
             } catch (Exception e) {
                 System.out.println(a.getName() + " don't talk.");
             }
         }
 
         System.out.println("__________________________________________________");
-//        System.out.println("_".repeat(50));
         for (Animal a :
                 animals) {
             for (Food f :
@@ -43,18 +45,39 @@ class Zoo {
         }
 
         System.out.println("__________________________________________________");
-//        System.out.println("_".repeat(50));
         Vector pond = new Vector();
         for (int i = 0; i < animals.length * 3; i++) {
             try {
                 pond.add((Swim)animals[i%animals.length]);
             } catch (Exception e) {
-//                e.printStackTrace();
             }
         }
         for (Object a :
                 pond) {
-            ((Swim)a).swim();
+            if ((int)(Math.random() * 2) == 0)
+                ((Swim)a).swim();
+            else
+                ((Swim)a).spin();
+
+        }
+
+        System.out.println("__________________________________________________");
+        for (Animal a:
+             animals) {
+            try {
+                if ((int)(Math.random() * 2) == 0)
+                    ((Run)a).run();
+                else
+                    ((Run)a).runAround();
+            } catch (Exception e) {
+            }
+            try {
+                if ((int)(Math.random() * 2) == 0)
+                    ((Fly)a).fly();
+                else
+                    ((Fly)a).goDown();
+            } catch (Exception e) {
+            }
         }
     }
 }
